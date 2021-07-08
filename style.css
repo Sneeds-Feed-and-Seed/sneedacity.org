@@ -1,0 +1,70 @@
+body {
+    color: #fff;
+    background: rgb(29, 31, 33);
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 50em;
+    font: 14px sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+figure figcaption header footer {
+    text-align: center;
+}
+
+.buttoncontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.bigbutton {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-size: 18px;
+    background-color: #444;
+    border-radius: 8px;
+    text-decoration: none;
+    justify-content: space-between;
+    color: white;
+    border: 2px solid #aaa;
+}
+
+ul {
+    color: #b5bd68;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.bigbutton img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.logobar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    font-size: 32px;
+    height: 48px;
+}
+
+.logobar img {
+    height: 48px;
+    margin-right: 10px;
+    width: auto;
+}
+
+.logobar p {
+    flex-grow: 1;
+}
