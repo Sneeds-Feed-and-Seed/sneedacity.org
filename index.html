@@ -8,38 +8,110 @@
 <meta name="robots" content="index, follow">
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' type='text/css' href='/css/style.css'>
 <title>Sneedacity</title>
-
-<style>
-    body{
-        color:#000;
-        background:#fff;
-        margin:1em auto;
-        padding:1em;
-        max-width:50em;
-        font:14px sans-serif;
-    }
-    
-    img{
-        width: 100%;
-        height: auto;
-        margin: auto;
-    }
-    
-    figure figcaption {
-        text-align: center;
-    }
-</style>
 </head>
 
-<body>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="nav-mobile">
+                    <button type="button" class="nav-toggle" onclick="navToggle()">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
 
-<figure>
-    <a href="/images/sneed.gif">
-        <img style="width: 100%; height: auto; margin: auto;" src="/images/sneed.gif" alt="Sneed's Feed and Seed" loading="lazy">
-    </a>
-    <figcaption>Sneedacity.org is currently under construction.</figcaption>
-</figure>
+                <nav class="main">
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/about.html">About</a>
+                    <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619">Download</a>
+                    <a href="https://github.com/Sneeds-Feed-and-Seed">SneedSuite</a>
+                    <a href="https://sneed.social/">Community</a>
+                    <a href="/pages/contact.html">Contact</a>
+                    <a href="/pages/donate.html">Donate</a>
+                </nav>
+                <div class="container">
+                    <div class="logo">
+                        <span id="farmerHead">
+				                    <img src="https://monokumabear.github.io/sneedacityWebpage/resources/sneedFarmerHeadTransparentNoEyes.png"></img>
+				                    <canvas width="512" height="512"></canvas>
+                        </span>
+                        <h1>Sneedacity</h1>
+                    </div>
+                
+                    <h2>A free, privacy-respecting, audio editor.</h2>
+                    <p>This page is under construction.</p>
+                    <div class="download-btns">
+                        <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_Ubuntu_18.04_1012473619_793c4fa">&darr; Linux</a>
+                        <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_Windows_64bit_1012473619_793c4fa">&darr; Windows</a>
+                        <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_macOS_Intel_1012473619_793c4fa">&darr; MacOS</a>
+                    </div>
+                </div>
+            </div>
 
-</body>
+          <div class="tour-banner">
+                <div class="container">
+                    The Sneed advantage
+                </div>
+          </div>
+      
+            <div class="features">
+                <div class="container">
+                    <ul>
+                        <li><b>Recording</b> from any real, or virtual audio device that is available to the host system.</li>
+                        <li><b>Export / Import</b> a wide range of audio formats, extendible with FFmpeg.</li>
+                        <li><b>High quality</b> using 32-bit float audio processing.</li>
+                        <li><b>Plug-ins</b> Support for multiple audio plug-in formats, including VST, LV2, AU.</li>
+                        <li><b>Macros</b> for chaining commands and batch processing.</li>
+                        <li><b>Scripting</b> in Python, Perl, or any language that supports named pipes.</li>
+                        <li><b>Nyquist</b> Very powerful built-in scripting language that may also be used to create plug-ins.</li>
+                        <li><b>Editing</b> multi-track editing with sample accuracy and arbitrary sample rates.</li>
+                        <li><b>Accessibility</b> for VI users.</li>
+                        <li><b>Analysis and visualization</b> tools to analyze audio, or other signal data.</li>
+                  </ul>
+                </div>
+            </div>
+
+            <div class="releases">
+                <div class="container">
+		            <h2 id="Releases">Sneedacity 3.0.3</h2>
+                    <h3>Released June 29, 2021</h3>
+                    <p>Sneedacity forked from Audacity.</p>
+                </div>
+
+            </div>
+            <div class="push"></div>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <nav>
+                    <a href="/index.html">Home</a>
+                    <a href="/pages/about.html">About</a>
+                    <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619">Download</a>
+                    <a href="https://github.com/Sneeds-Feed-and-Seed">SneedSuite</a>
+                    <a href="https://sneed.social/">Community</a>
+                    <a href="/pages/contact.html">Contact</a>
+                    <a href="/pages/donate.html">Donate</a>
+                </nav>
+                <div class="left">
+                    <p>Design provided by <a href="http://nicolas-petton.fr">Nicolas Petton</a>.</p>
+                    <p>Adapted by <a href="https://github.com/MonokumaBear">MonokumaBear</a> and <a href="https://pbanks.net/">Parker Banks</a>.</p>
+
+                </div>
+                <div class="right">
+                    <p>
+                        Please send comments to
+                        <a href="mailto:parker@pbanks.net">parker@pbanks.net</a>.
+                    </p>
+                    <p>This website is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA</a> License.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="scripts/sneed.js"></script>
+
 </html>

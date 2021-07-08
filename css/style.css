@@ -1,0 +1,327 @@
+/*
+Original author: Nicolas Petton <nicolas@petton.fr>
+Adapted by: MonokumaBear <github.com/MonokumaBear>
+            Parker Banks <parker@pbanks.net>
+
+This file is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This file is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+*/
+
+a, audio, body, canvas, code, div, figure, footer, h1, h2, h3, h4, h5, h6, header, html, img, kbd, li, nav, p, span, u, ul {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline
+}
+
+figure, footer, header, nav {
+    display:block
+}
+
+body {
+    line-height:1
+}
+
+ul {
+    list-style:none
+}
+
+body {
+    font-family:sans-serif;
+    line-height:1.5em;
+    font-size:1.1em;
+    color:#eee;
+    background:#1d1f21;
+}
+
+body, html {
+    height:100%
+}
+
+.wrapper {
+    min-height:100%;
+    height:auto!important;
+    height:100%;
+    margin:0 auto -160px
+}
+
+.footer, .push {
+    height:160px
+}
+
+h1 {
+    font-size:2.1em;
+    font-weight:700;
+    margin:.4em;
+    line-height:1.5em;
+    font-weight:300
+}
+
+h1 span {
+    font-weight:400;
+    display:block;
+    font-size:.8em;
+    line-height:1em
+}
+
+h2 {
+    font-size:2em;
+    margin:.8em 0 .4em;
+    font-weight:500;
+    line-height:2em
+}
+
+h3 {
+    font-size:1.3em;
+    margin:2em 0 1em 0
+}
+
+a {
+    color:#76319f;
+    text-decoration:underline;
+}
+
+a:hover {
+    color:#3e0c5c
+}
+
+p {
+    margin-bottom:2em
+}
+
+li {
+    list-style:square;
+    margin-bottom:10px;
+    margin-left:40px
+}
+
+.container {
+    padding:40px 0;
+    width:960px;
+    margin:0 auto;
+    overflow:auto
+}
+
+.header{
+    color:#eee;
+    text-align:left;
+    background:#1d1f21;
+    padding-bottom:1em
+}
+
+.header .nav-mobile {
+    display:none
+}
+
+.header nav {
+    background:#26282c;
+    border-bottom:1px solid #111;
+    padding:8px;margin-bottom:20px;
+    text-align:center;
+    font-size:.9em;
+    font-weight:400
+}
+
+.header nav a {
+    color:#eee;
+    padding:10px
+}
+
+.header nav a:hover {
+    color:#eee;
+    text-decoration:underline
+}
+
+.header .container {
+    padding-top:40px;
+    padding-bottom:40px;
+    position:relative;
+    overflow:hidden
+}
+
+.header .logo {
+    overflow:hidden;
+    text-align:center;
+    z-index:1
+}
+
+.header .logo img {
+    max-height:100px;
+    vertical-align:top
+}
+
+.header .logo h1 {
+    display:inline;
+    font-size:4em;
+    line-height:110px;
+    margin:0 10px;
+    font-weight:600
+}
+
+.header h2 {
+    z-index:1;
+    margin:0 auto;
+    text-align:center;
+    margin-bottom:10px;
+    font-size:2.6em;
+    line-height:1.3em;
+    margin-top:20px;
+    font-weight:300;
+    max-width:960px
+}
+
+.header p {
+    margin:0 auto;
+    text-align:center;
+    max-width:760px;
+    font-weight:300;
+    font-size:1.2em
+}
+
+.header a {
+    text-decoration:none
+}
+
+.header a.more {
+    font-size:.8em;
+    text-align:right;
+    color:#622486;
+    display:initial;
+    float:right
+}
+
+.header .download-btns {
+    margin-top:40px;
+    text-align:center
+}
+
+.header .download-btns a {
+    background-color:#365696;
+    color:#eee;
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:3px;
+    margin-right:10px;
+    border:1px solid #026
+}
+
+.header .download-btns a:hover{background-color:#284070}
+
+.tour-banner{font-size:1.8em;text-align:center;background:#284070;color:#fff}
+.tour-banner .container{padding:20px 0}
+.features{border-top:1px solid #22365e;background:#365696;color:#fafafa;overflow:hidden}
+.features .container{padding-top:20px}
+.features a,.tour-banner a{color:#ffde8f;text-decoration:none}
+.features a:hover{text-decoration:underline}
+.features h2{text-align:center;color:#eee2ff}
+.features ul{overflow:auto}
+/*
+.features li{text-align:center;list-style:outside none none;width:27%;margin:30px 3%;float:left;padding-left:0;padding-top:210px;background-position:center top;background-repeat:no-repeat}
+
+.features .privacy{background-image:url(https://sneedacity.org/images/placeholder.png)}
+.features .community{background-image:url(https://sneedacity.org/images/placeholder.png)}
+.features .interface{background-image:url(https://sneedacity.org/images/placeholder.png)}
+*/
+
+.releases{color:#eee;background:#1d1f21;text-align:left}
+
+.releases h3{margin:.8em 0 2em 0}
+
+.releases p+ul{margin-top:-1em}
+
+.releases ul+p{margin-top:2em;text-align:left}
+
+.footer{border-top:1px solid #111;padding-top:15px;text-align:center;background:#284070;color:#999}
+
+.footer h3{font-size:1.3em}
+
+.footer .container{padding:5px;font-size:.8em;overflow:hidden}
+
+.footer .container>div{width:430px;float:left}
+
+.footer .container>div:last-child{margin-left:100px}
+
+.footer .left{text-align:left}
+
+.footer .right{text-align:right}
+
+.footer p{margin:5px 0}
+
+.footer nav{font-size:1.2em;margin-bottom:40px}
+
+.footer nav a{margin:10px}
+
+.footer nav a:hover{text-decoration:none}
+
+.footer a{color:#eee;text-decoration:none}
+
+.footer a:hover{color:#d81f11}
+
+@media screen and (max-width:999px){
+    .container{width:800px}
+    .container{width:90%;padding:40px 5%}
+    .header .container{padding-bottom:0}
+    .header h2,.header p{max-width:100%}
+    .wrapper{margin:0 auto -300px}
+    .footer,.push{height:300px}
+    .footer .container>.left,.footer .container>.right{float:none;text-align:center;width:auto}
+    .footer .container>div:last-child{margin-left:0}
+}
+
+@media screen and (max-width:840px){
+    .features ul li{width:auto;margin:20px 5%;float:none}
+}
+
+@media screen and (max-width:639px){
+    body{font-size:1em}
+    .header .container{text-align:center;padding-top:0}
+    .header .logo{text-align:center}
+    .header .logo h1,.header .logo img{float:none}
+    .header .logo h1{display:block;font-size:3em;line-height:2em;margin-left:5px}.header h2{margin-top:10px;margin-bottom:30px;font-size:1.8em}
+    .header .nav-mobile{display:block;overflow:hidden;color:#ddd}
+    .header .nav-mobile .nav-toggle{border:0 none;border-radius:4px;background:0 0;margin:5px;float:right;width:45px;height:45px}
+    .header .nav-mobile .nav-toggle .bar{display:block;width:100%;height:4px;border-radius:1px;background:#365696;margin:5px 0}
+    .header .nav-mobile .nav-toggle:hover .bar{background:#284070}
+    .header nav{display:none;padding:0}
+    .header nav a{padding:10px;display:block;text-align:left;border-top:1px solid #999;font-size:1.2em;font-weight:400}
+}
+
+@media screen and (max-width:550px){
+    .wrapper{margin:0 auto -320px}
+    .footer,.push{height:320px}
+}
+
+#farmerHead{
+    display:inline-flex;
+    position:relative;
+    width:60px;
+    height:4em;
+    vertical-align:-25%;
+}
+
+#farmerHead>canvas, #farmerHead>img {
+    height:4em;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+
+#farmerHead>img {
+    z-index:1;
+    width:auto
+}
+
+#farmerHead>canvas{
+    z-index:0;
+    width:calc(3.3974em)
+}
