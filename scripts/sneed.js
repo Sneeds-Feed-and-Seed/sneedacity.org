@@ -10,6 +10,7 @@
 			FARMER_EYE_CANVAS_CLIENT_RECT = FARMER_EYE_CANVAS.getBoundingClientRect();
 			FARMER_EYE_CANVAS_SCALING_FACTORS = [FARMER_EYE_CANVAS.width / FARMER_EYE_CANVAS_CLIENT_RECT.width, FARMER_EYE_CANVAS.height / FARMER_EYE_CANVAS_CLIENT_RECT.height];
 		};
+		FARMER_EYE_IMAGE.src = "/images/sneedHead.png";
 		updateScreenBasedMeasurements();
 		window.addEventListener("resize", updateScreenBasedMeasurements);
 		const FARMER_EYE_MAX_LOOK_DISTANCE = 15;
