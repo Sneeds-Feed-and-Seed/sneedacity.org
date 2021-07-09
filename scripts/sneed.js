@@ -1,10 +1,11 @@
     const FARMER_EYE_SCLERA_COLOR = "#BCCDD5";
 		const FARMER_EYE_PUPIL_COLOR = "#0C141F";
-		const FARMER_EYE_IMAGE = document.getElementById("farmerHead").getElementsByTagName("img")[0];
 		const FARMER_EYE_POSITIONS = [[100, 235], [240, 230]];
 		const FARMER_EYE_CANVAS = document.getElementById("farmerHead").getElementsByTagName("canvas")[0];
+    let FARMER_EYE_IMAGE = document.getElementById("farmerHead").getElementsByTagName("img")[0];
 		let FARMER_EYE_CANVAS_CLIENT_RECT = null;
 		let FARMER_EYE_CANVAS_SCALING_FACTORS = null;
+    FARMER_EYE_IMAGE.src = "/images/sneedHead.png";
 		//Updates any screen-based measurements when the window size is changed
 		function updateScreenBasedMeasurements() {
 			FARMER_EYE_CANVAS_CLIENT_RECT = FARMER_EYE_CANVAS.getBoundingClientRect();
