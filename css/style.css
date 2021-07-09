@@ -99,9 +99,12 @@ p {
 }
 
 li {
-	list-style:square;
 	margin-bottom:10px;
 	margin-left:40px
+}
+
+ul li:before {
+	content:"> ";
 }
 
 .container {
