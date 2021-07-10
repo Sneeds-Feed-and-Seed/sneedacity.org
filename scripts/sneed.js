@@ -64,5 +64,5 @@ function playSneed() {
 		return;
 	}
 	audio.play();
-	already_playing = true;
+	already_playing = false;
 }
