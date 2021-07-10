@@ -55,7 +55,14 @@ const ARTIFICIAL_MOUSEMOVE_EVENT = new MouseEvent("mousemove", {
 });
 window.dispatchEvent(ARTIFICIAL_MOUSEMOVE_EVENT);
 
+let already_playing = false;
 function playSneed() {
 	let audio = new Audio("../assets/sneedwave-sneethe.opus");
+	if (!already_playing) {
+		already_playing = true;
+	} else {
+		return;
+	}
 	audio.play();
+	already_playing = true;
 }
