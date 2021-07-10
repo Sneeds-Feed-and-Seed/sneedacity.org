@@ -20,11 +20,14 @@ FARMER_EYE_CANVAS_CONTEXT.strokeStyle = "#00000000";
 function clientToCanvasPosition(coordinates) {
 	return [FARMER_EYE_CANVAS_SCALING_FACTORS[0] * (coordinates[0] - FARMER_EYE_CANVAS_CLIENT_RECT.left), FARMER_EYE_CANVAS_SCALING_FACTORS[1] * (coordinates[1] - FARMER_EYE_CANVAS_CLIENT_RECT.top)];
 };
+let mouseX = 0;
+let mouseY = 0;
 function updateFarmerEyePosition(mouseMoveEvent) {
 	FARMER_EYE_CANVAS_CONTEXT.fillStyle = FARMER_EYE_SCLERA_COLOR;
 	FARMER_EYE_CANVAS_CONTEXT.fillRect(67, 190, 300, 70);
-
-	const MOUSE_POSITION = [mouseMoveEvent.clientX, mouseMoveEvent.clientY];
+	mouseX = mouseMoveEvent.clientX;
+	mouseY = mouseMoveEvent.clientY;
+	const MOUSE_POSITION = [mouseX, mouseY];
 	const MOUSE_POSITION_CANVAS = clientToCanvasPosition(MOUSE_POSITION);
 	let THETAS = [Math.atan((MOUSE_POSITION_CANVAS[1] - FARMER_EYE_POSITIONS[0][1]) / (MOUSE_POSITION_CANVAS[0] - FARMER_EYE_POSITIONS[0][0])), Math.atan((MOUSE_POSITION_CANVAS[1] - FARMER_EYE_POSITIONS[1][1]) / (MOUSE_POSITION_CANVAS[0] - FARMER_EYE_POSITIONS[1][0]))];
 	//Adding pi to the result if the sign of MOUSE_POSITION_CANVAS[1] - FARMER_EYE_POSITIONS[0][1] is negative gives the correct value of arctan, since the Math.atan() function only returns solutions within the interval [-pi/2, pi/2]
@@ -51,3 +54,8 @@ const ARTIFICIAL_MOUSEMOVE_EVENT = new MouseEvent("mousemove", {
 	clientY: (FARMER_EYE_POSITIONS[0][1] + FARMER_EYE_POSITIONS[1][1]) / 2
 });
 window.dispatchEvent(ARTIFICIAL_MOUSEMOVE_EVENT);
+
+function playSneed() {
+	let audio = new Audio("../assets/sneedwave-sneethe.opus");
+	audio.play();
+}
