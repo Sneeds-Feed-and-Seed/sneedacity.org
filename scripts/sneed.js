@@ -55,14 +55,14 @@ const ARTIFICIAL_MOUSEMOVE_EVENT = new MouseEvent("mousemove", {
 });
 window.dispatchEvent(ARTIFICIAL_MOUSEMOVE_EVENT);
 
-let already_playing = false;
-function playSneed() {
-	let audio = new Audio("../assets/sneedwave-sneethe.opus");
-	if (!already_playing) {
-		already_playing = true;
-	} else {
-		return;
+document.getElementById("farmerImg").addEventListener("click", function(e){
+	var state = e.currentTarget.dataset.state;
+	if (state == "play") {
+		document.querySelector("audio").play();
+		e.currentTarget.dataset.state = "pause";
 	}
-	audio.play();
-	already_playing = false;
-}
+	else {
+		document.querySelector("audio").pause();
+		e.currentTarget.dataset.state = "play";
+	}	
+});
