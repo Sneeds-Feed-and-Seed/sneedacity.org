@@ -32,7 +32,7 @@ body {
 }
 
 ul {
-	list-style:none
+	list-style:none;
 }
 
 body {
@@ -86,12 +86,12 @@ h3 {
 }
 
 a {
-	color:#76319f;
+	color:#d81f11;
 	text-decoration:underline;
 }
 
 a:hover {
-	color:#3e0c5c
+	color:#91150b
 }
 
 p {
@@ -220,21 +220,14 @@ input.borgir {
 
 .header .download-btns a:hover{background-color:#284070}
 
-.tour-banner{font-size:1.8em;text-align:center;background:#284070;color:#fff}
+.tour-banner{font-size:1.8em;text-align:center;background:#284070;color:#eee}
 .tour-banner .container{padding:20px 0}
-.features{border-top:1px solid #22365e;background:#365696;color:#fafafa;overflow:hidden}
+.features{border-top:1px solid #22365e;background:#365696;color:#eee;overflow:hidden}
 .features .container{padding-top:20px}
-.features a,.tour-banner a{color:#ffde8f;text-decoration:none}
+.features a,.tour-banner a{color:#d81f11;text-decoration:none}
 .features a:hover{text-decoration:underline}
 .features h2{text-align:center;color:#eee2ff}
 .features ul{overflow:auto}
-/*
-.features li{text-align:center;list-style:outside none none;width:27%;margin:30px 3%;float:left;padding-left:0;padding-top:210px;background-position:center top;background-repeat:no-repeat}
-
-.features .privacy{background-image:url(https://sneedacity.org/images/placeholder.png)}
-.features .community{background-image:url(https://sneedacity.org/images/placeholder.png)}
-.features .interface{background-image:url(https://sneedacity.org/images/placeholder.png)}
-*/
 
 .releases{color:#eee;background:#1d1f21;text-align:left}
 
