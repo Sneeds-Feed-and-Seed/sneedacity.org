@@ -35,6 +35,16 @@ ul {
 	list-style:none;
 }
 
+pre {
+	font: 1.1em monospace;
+	line-height:1.5em;
+	padding: 10px;
+	background: #26282c;
+	margin: 20px 0px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
 body {
 	font-family:sans-serif;
 	line-height:1.5em;
