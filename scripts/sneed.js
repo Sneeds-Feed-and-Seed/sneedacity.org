@@ -54,15 +54,3 @@ const ARTIFICIAL_MOUSEMOVE_EVENT = new MouseEvent("mousemove", {
 	clientY: (FARMER_EYE_POSITIONS[0][1] + FARMER_EYE_POSITIONS[1][1]) / 2
 });
 window.dispatchEvent(ARTIFICIAL_MOUSEMOVE_EVENT);
-
-document.getElementById("farmerImg").addEventListener("click", function(e){
-	var state = e.currentTarget.dataset.state;
-	if (state == "play") {
-		document.querySelector("audio").play();
-		e.currentTarget.dataset.state = "pause";
-	}
-	else {
-		document.querySelector("audio").pause();
-		e.currentTarget.dataset.state = "play";
-	}	
-});
