@@ -23,12 +23,20 @@ a, audio, body, canvas, code, div, figure, footer, h1, h2, h3, h4, h5, h6, heade
 	vertical-align:baseline
 }
 
-figure, footer, header, nav {
-	display:block
+body {
+	font-family:sans-serif;
+	line-height:1.5em;
+	font-size:1.1em;
+	color:#eee;
+	background:#1d1f21;
 }
 
-body {
-	line-height:1
+body, html {
+	height:100%
+}
+
+figure, footer, header, nav {
+	display:block
 }
 
 ul {
@@ -43,18 +51,6 @@ pre {
 	margin: 20px 0px;
 	border: 1px solid #ccc;
 	border-radius: 6px;
-}
-
-body {
-	font-family:sans-serif;
-	line-height:1.5em;
-	font-size:1.1em;
-	color:#eee;
-	background:#1d1f21;
-}
-
-body, html {
-	height:100%
 }
 
 .wrapper {
@@ -110,7 +106,7 @@ p {
 
 li {
 	margin-bottom:10px;
-	margin-left:40px
+	margin-left:0;
 }
 
 ul li:before {
@@ -231,12 +227,19 @@ input.borgir {
 .header .download-btns a:hover{background-color:#284070}
 
 .tour-banner{font-size:1.8em;text-align:center;background:#284070;color:#eee}
+
 .tour-banner .container{padding:20px 0}
+
 .features{border-top:1px solid #22365e;background:#365696;color:#eee;overflow:hidden}
+
 .features .container{padding-top:20px}
+
 .features a,.tour-banner a{color:#d81f11;text-decoration:none}
+
 .features a:hover{text-decoration:underline}
+
 .features h2{text-align:center;color:#eee2ff}
+
 .features ul{overflow:auto}
 
 .releases{color:#eee;background:#1d1f21;text-align:left}
@@ -285,7 +288,7 @@ input.borgir {
 }
 
 @media screen and (max-width:840px){
-	.features ul li{width:auto;margin:20px 5%;float:none}
+	.features ul li{width:auto;margin:20px 0;float:none}
 }
 
 @media screen and (max-width:639px){
