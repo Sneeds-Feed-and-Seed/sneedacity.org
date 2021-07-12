@@ -12,7 +12,8 @@ document.getElementById("farmerImg").addEventListener("click", function(e){
 
 var songArray = [
 	"/assets/sneedwave-sneethe.opus",
-	"/assets/feed-and-seed.ogg"
+	"/assets/feed-and-seed.ogg",
+	"/assets/officer-sneed.ogg"
 ];
 
 var randomNumber = Math.floor(Math.random() * songArray.length);
