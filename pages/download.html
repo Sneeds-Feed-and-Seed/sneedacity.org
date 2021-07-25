@@ -49,31 +49,39 @@
 			<div class="container">
 
 				<h2 id="linux">Linux</h2>
-				<p>Prebuilt binaries for Ubuntu Linux can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_Ubuntu_18.04_1012473619_793c4fa.zip">here</a>. Instructions for building from source are as follows.</p>
+<p>Pre-built binaries for Ubuntu Linux can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/workflows/cmake_build/master/Sneedacity_Ubuntu_18.04_1059706562_e476486.zip">here</a>. Binaries can be installed on Arch Linux from the <em>Sneed Arch Repo</em> by adding the following lines to <code>/etc/pacman.conf</code> (replace <code>x86_64</code> with <code>aarch64</code> on ARM systems)</p>
+<pre>
+[sneed-arch-repo]
+SigLevel = Optional TrustAll
+Server = https://repo.swurl.xyz/sneed/arch/x86_64
+</pre><br>
+<p>And installing via the following command</p>
+<pre>
+pacman -Syu sneedacity-bin
+</pre><br>
+
+				<h3>Installing from source</h3>
 <p>1. Install dependencies using the following commands on Debian/Ubuntu</br>
 <pre>
-sudo apt install build-essential git cmake python3 python3-pip
-sudo apt install libgtk2.0-dev libasound2-dev libavformat-dev
-pip3 install conan
+sudo apt-get update
+sudo apt-get install -y build-essential cmake git python3-pip
+sudo apt-get install libgtk2.0-dev libasound2-dev libavformat-dev
 </pre><br>
 
 <p>Or the following on Arch</p>
 <pre>
 sudo pacman -Syu base-devel git cmake python python-pip
 sudo pacman -Syu gtk2 alsa-lib ffmpeg
-pip3 install conan
 </pre><br>
 
 <p>2. Clone Sneedacity from GitHub</p>
 <pre>
-export PATH="/home/$USER/.local/bin:$PATH"
 git clone https://github.com/Sneeds-Feed-and-Seed/sneedacity
 </pre><br>
 
 <p>3. Configure Sneedacity using CMake</p>
 <pre>
-mkdir sneed_build
-cd sneed_build
+mkdir build && cd build
 cmake -G "Unix Makefiles" -Dsneedacity_use_ffmpeg=loaded ../sneedacity
 </pre><br>
 
@@ -88,10 +96,54 @@ cmake -G "Unix Makefiles" -Dsneedacity_use_ffmpeg=loaded ../sneedacity
 				<p>While we support Sneedacity for all major systems, we also encourage the use of <a href="https://www.gnu.org/philosophy/free-sw.html">free</a> software built on <a href="https://www.gnu.org/philosophy/free-software-even-more-important.html">free</a> operating systems.</p>
 
 				<h2 id="macos">MacOS</h2>
-				<p>Prebuilt binaries for MacOS can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_macOS_Intel_1012473619_793c4fa.zip">here</a>.</p>
+				<p>Prebuilt binaries for MacOS can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/workflows/cmake_build/master/Sneedacity_macOS_Intel_1059706562_e476486.zip">here</a>.</p>
+
+				<h3>Installing from source</h3>
+<p>1. Install the following dependencies and a C++17 compiler. We build Sneedacity with XCode 12. However, XCode 7 may also work.</br>
+<pre>
+brew install cmake python
+</pre><br>
+
+<p>2. Clone Sneedacity from GitHub</p>
+<pre>
+git clone https://github.com/Sneeds-Feed-and-Seed/sneedacity
+</pre><br>
+
+<p>3. Configure Sneedacity using CMake</p>
+<pre>
+mkdir build && cd build
+cmake -GXcode -T buildsystem=1 ../sneedacity
+</pre><br>
+
+<p>4. Open Sneedacity in XCode</p>
+<pre>open Sneedacity.xcodeproj</pre><br>
+
+<p>5. Build Sneedacity using the IDE</p>
 
 				<h2 id="windows">Windows</h2>
-				<p>Prebuilt binaries for 64-bit Windows can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_Windows_64bit_1012473619_793c4fa.zip">here</a>, or <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/actions/runs/1012473619/Sneedacity_Windows_32bit_1012473619_793c4fa.zip">here</a> for 32-bit Windows.</p>
+				<p>Prebuilt binaries for 64-bit Windows can be downloaded <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/workflows/cmake_build/master/Sneedacity_Windows_64bit_1059706562_e476486.zip">here</a>, or <a href="https://nightly.link/Sneeds-Feed-and-Seed/sneedacity/workflows/cmake_build/master/Sneedacity_Windows_32bit_1059706562_e476486.zip">here</a> for 32-bit Windows.</p>
+
+				<h3>Installing from source</h3>
+<p>1. Install Visual Studio and the following dependencies. We build Sneedacity with <a href="https://visualstudio.microsoft.com/vs/community/">Microsoft Visual Studio 2019</a>. However, MSVC 2017 should also work.</br>
+<pre>
+python3 >= 3.5
+cmake >= 3.16
+</pre><br>
+
+<p>2. Clone Sneedacity from GitHub</p>
+<pre>
+git clone https://github.com/Sneeds-Feed-and-Seed/sneedacity
+</pre><br>
+
+<p>3. Open CMake GUI. Set <em>where is the source code</em> to the Sneedacity source folder and <em>where to build the binaries</em> to a preferred location outside the source folder.</p>
+
+<p>4. Press configure, selecting the x64 or Win32 platforms as preferred.</p>
+
+<p>5. <em>Configuring done</em> will appear in the log following successful configuration. Press <em>Generate</em> to generate the Visual Studio project.</p>
+
+<p>6. <em>Generating done</em> will appear. Press <em>Open Project</em> to open the project in Visual Studio.</p>
+
+<p>7. Select <em>Build -> Build Solution</em>. You can now run Sneedacity!</p>
 
 			</div>
 		</div>
@@ -108,13 +160,13 @@ cmake -G "Unix Makefiles" -Dsneedacity_use_ffmpeg=loaded ../sneedacity
 				</nav>
 				<div class="left">
 					<p>Design provided by <a href="http://nicolas-petton.fr">Nicolas Petton</a>.</p>
-					<p>Adapted by <a href="https://github.com/MonokumaBear">MonokumaBear</a> and <a href="https://brave.cafe/@parker">Parker Banks</a>.</p>
+					<p>Adapted by <a href="https://github.com/MonokumaBear">MonokumaBear</a> and <a href="https://leafposter.club/@parker">Parker Banks</a>.</p>
 
 				</div>
 				<div class="right">
 					<p>
 						Please forward comments to
-						<a href="https://brave.cafe/@parker">Parker Banks</a>.
+						<a href="https://leafposter.club/@parker">Parker Banks</a>.
 					</p>
 					<p>This website is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA</a> License.
 					</p>

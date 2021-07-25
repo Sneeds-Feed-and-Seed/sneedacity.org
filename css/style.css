@@ -53,6 +53,14 @@ pre {
 	border-radius: 6px;
 }
 
+code {
+	font: 1.1em monospace;
+	background: #26282c;
+	border: 1px solid #ccc;
+	padding: 2px 6px 0px;
+	border-radius: 4px;
+}
+
 .wrapper {
 	min-height:100%;
 	height:auto!important;
